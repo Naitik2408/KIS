@@ -23,12 +23,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const shouldLoadVercelAnalytics = process.env.VERCEL === '1'
+
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className="font-sans antialiased" suppressHydrationWarning>
         <ClerkProvider>
           {children}
-          <Analytics />
+          {shouldLoadVercelAnalytics ? <Analytics /> : null}
         </ClerkProvider>
       </body>
     </html>

@@ -1,5 +1,6 @@
 import 'server-only'
 
+import dns from 'node:dns'
 import fs from 'node:fs'
 import path from 'node:path'
 import mongoose from 'mongoose'
@@ -16,6 +17,7 @@ declare global {
 
 const cache: MongooseCache = global.mongooseCache || { conn: null, promise: null }
 let envLoaded = false
+let dnsConfigured = false
 
 function loadLocalEnvFallback() {
   try {
@@ -47,11 +49,30 @@ function loadLocalEnvFallback() {
   }
 }
 
+function configureDnsServers() {
+  if (dnsConfigured) {
+    return
+  }
+
+  const configuredServers = (process.env.DNS_SERVERS || '1.1.1.1,8.8.8.8')
+    .split(',')
+    .map((server) => server.trim())
+    .filter(Boolean)
+
+  if (configuredServers.length > 0) {
+    dns.setServers(configuredServers)
+  }
+
+  dnsConfigured = true
+}
+
 if (!global.mongooseCache) {
   global.mongooseCache = cache
 }
 
 export async function connectToDatabase() {
+  configureDnsServers()
+
   let mongoUri =
     process.env.MONGODB_URI ||
     process.env.MONGODB_URL ||
@@ -67,6 +88,10 @@ export async function connectToDatabase() {
   }
 
   if (!mongoUri) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('Missing MongoDB connection string. Set MONGODB_URI (or MONGODB_URL) in environment variables.')
+    }
+
     // Local development fallback to avoid blocking when env injection is flaky.
     mongoUri = 'mongodb://127.0.0.1:27017'
   }
