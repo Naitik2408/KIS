@@ -7,7 +7,7 @@ export function LaptopBuyRentSection() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" id="rental">
       <div className="rounded-2xl border border-border bg-card overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="p-8 sm:p-10 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-br from-background to-muted/40">
+          <div className="p-8 sm:p-10 border-b lg:border-b-0 lg:border-r border-border bg-linear-to-br from-background to-muted/40">
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold tracking-wide text-muted-foreground">
               <ShoppingBag className="w-3.5 h-3.5" />
               Buy Laptops
@@ -26,7 +26,7 @@ export function LaptopBuyRentSection() {
             </Link>
           </div>
 
-          <div className="p-8 sm:p-10 bg-gradient-to-br from-primary/10 via-background to-background">
+          <div className="p-8 sm:p-10 bg-linear-to-br from-primary/10 via-background to-background">
             <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">
               <CalendarClock className="w-3.5 h-3.5" />
               Rent Laptops
@@ -51,7 +51,12 @@ export function LaptopBuyRentSection() {
               </div>
             </div>
 
-            <a href="mailto:krishnainfotechsolution@gmail.com?subject=Laptop%20Rental%20Inquiry" className="inline-block w-full sm:w-auto">
+            <a
+              href="https://wa.me/919060557296?text=Hi%20Krishna%20Infotech%20Solutions,%20I%20want%20to%20rent%20some%20laptops.%20Please%20connect%20with%20me."
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block w-full sm:w-auto"
+            >
               <Button variant="outline" className="w-full sm:w-auto">Request Rental Quote</Button>
             </a>
           </div>

@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button'
 const CONTACT = {
   ownerName: 'Owner',
   ownerEmail: 'krishnainfotechsolution@gmail.com',
-  phonePrimaryLabel: '+91 98765 43210',
-  phonePrimaryDial: '+919876543210',
-  phoneAlternateLabel: '+91 98300 12345',
-  phoneAlternateDial: '+919830012345',
-  whatsappDial: '919876543210',
+  phonePrimaryLabel: '+91 90605 57296',
+  phonePrimaryDial: '+919060557296',
+  phoneAlternateLabel: '+91 90605 57296',
+  phoneAlternateDial: '+919060557296',
+  whatsappDial: '919060557296',
 }
 
 export function ContactHubSection() {

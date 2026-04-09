@@ -173,7 +173,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-2">
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20Krishna%20Infotech%20Solutions,%20I%20need%20laptop%20details."
+                  href="https://wa.me/919060557296?text=Hi%20Krishna%20Infotech%20Solutions,%20I%20need%20laptop%20details."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-100 hover:border-primary/60 hover:text-primary transition"
@@ -182,7 +182,7 @@ export default function Home() {
                   WhatsApp
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919060557296"
                   className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-slate-100 hover:border-primary/60 hover:text-primary transition"
                 >
                   <PhoneCall className="w-3.5 h-3.5" />
