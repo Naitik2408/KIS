@@ -1,0 +1,423 @@
+[
+  {
+    "id": "1",
+    "name": "Premium Wireless Headphones",
+    "category": "Audio",
+    "price": 199.99,
+    "originalPrice": 299.99,
+    "rating": 4.8,
+    "reviews": 524,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    "description": "High-quality wireless headphones with noise cancellation, 30-hour battery life, and premium sound quality.",
+    "specs": {
+      "Connectivity": "Bluetooth 5.0",
+      "Battery Life": "30 hours",
+      "Noise Cancellation": "Active",
+      "Weight": "250g",
+      "Driver Size": "40mm"
+    },
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "wireless",
+      "noise-cancelling",
+      "premium"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "ProBook Ultra 15\" Laptop",
+    "category": "Laptops",
+    "price": 1299.99,
+    "originalPrice": 1599.99,
+    "rating": 4.8,
+    "reviews": 1243,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&h=500&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1588872657840-790ff3a58e39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1516387938699-c52646db42da?w=800&h=600&fit=crop"
+    ],
+    "description": "Ultra-powerful 15\" laptop with latest Intel processor, 32GB RAM, and stunning 4K display. Perfect for professionals and content creators.",
+    "specs": {
+      "Processor": "Intel Core i7-13700H (13th Gen)",
+      "RAM": "32GB DDR5",
+      "Storage": "1TB NVMe SSD",
+      "Display": "15.6\" 4K OLED (3840x2400)",
+      "GPU": "NVIDIA RTX 4070 (8GB)",
+      "Battery Life": "12+ hours",
+      "Weight": "1.85 kg",
+      "Ports": "2x Thunderbolt 4, 2x USB-A 3.2, HDMI 2.1, 3.5mm audio",
+      "OS": "Windows 11 Pro",
+      "Warranty": "2 years"
+    },
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "laptop",
+      "professional",
+      "4k-display",
+      "powerful"
+    ],
+    "shippingInfo": {
+      "estimatedDelivery": "Free delivery in 2-3 business days",
+      "freeShipping": true,
+      "returnPolicy": "30-day hassle-free returns"
+    },
+    "warranty": {
+      "duration": "2 years",
+      "coverage": "Hardware defects, accidental damage protection available"
+    },
+    "customerReviews": [
+      {
+        "id": "r1",
+        "author": "Sarah Chen",
+        "rating": 5,
+        "title": "Amazing laptop for video editing!",
+        "content": "Absolutely fantastic! The 4K display is incredible for color grading, and the RTX 4070 handles 4K video editing like a dream. Battery life is solid too.",
+        "date": "2 weeks ago",
+        "helpful": 247,
+        "verified": true
+      },
+      {
+        "id": "r2",
+        "author": "Michael Rodriguez",
+        "rating": 5,
+        "title": "Best investment for my creative work",
+        "content": "Fast performance, beautiful display, and excellent build quality. Runs all my software smoothly. Highly recommended for professionals.",
+        "date": "1 month ago",
+        "helpful": 189,
+        "verified": true
+      },
+      {
+        "id": "r3",
+        "author": "Emma Watson",
+        "rating": 4,
+        "title": "Great but slightly pricey",
+        "content": "Excellent performance and build quality. Only minor complaint is the price, but you get what you pay for. Worth it if you need power.",
+        "date": "1 month ago",
+        "helpful": 156,
+        "verified": true
+      }
+    ],
+    "qaItems": [
+      {
+        "id": "q1",
+        "question": "Can this laptop handle gaming?",
+        "asker": "GamerDude92",
+        "answer": "Yes! The RTX 4070 handles AAA games at high settings with 60+ FPS. It's not primarily a gaming laptop, but gaming performance is excellent.",
+        "answerer": "ProductTeam",
+        "helpful": 345,
+        "date": "3 weeks ago"
+      },
+      {
+        "id": "q2",
+        "question": "Is the display good for photo editing?",
+        "asker": "PhotoPro",
+        "answer": "The 4K OLED display is excellent for photo editing with 100% DCI-P3 color gamut. It's factory calibrated for accurate colors.",
+        "answerer": "ProductTeam",
+        "helpful": 289,
+        "date": "2 weeks ago"
+      },
+      {
+        "id": "q3",
+        "question": "What's the upgrade potential?",
+        "asker": "TechEnthusiast",
+        "answer": "RAM and storage are not user-upgradeable. However, the laptop comes with powerful specs that should last several years for most users.",
+        "answerer": "ProductTeam",
+        "helpful": 198,
+        "date": "1 week ago"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Mechanical Keyboard RGB",
+    "category": "Peripherals",
+    "price": 129.99,
+    "originalPrice": 179.99,
+    "rating": 4.7,
+    "reviews": 456,
+    "image": "https://images.unsplash.com/photo-1587829191301-3be6dc20ffb7?w=500&h=500&fit=crop",
+    "description": "Professional mechanical keyboard with RGB backlighting, hot-swappable switches, and aluminum frame.",
+    "specs": {
+      "Switch Type": "Cherry MX (Hot-swappable)",
+      "Backlighting": "RGB",
+      "Connectivity": "USB-C Wireless",
+      "Layout": "Full Size"
+    },
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "4",
+    "name": "4K Webcam",
+    "category": "Cameras",
+    "price": 149.99,
+    "originalPrice": 199.99,
+    "rating": 4.5,
+    "reviews": 289,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&h=500&fit=crop",
+    "description": "Ultra HD 4K webcam with auto-focus and built-in microphone. Perfect for streaming and video calls.",
+    "specs": {
+      "Resolution": "4K (3840x2160)",
+      "Frame Rate": "30 FPS",
+      "Microphone": "Stereo Built-in",
+      "Field of View": "90°"
+    },
+    "inStock": true
+  },
+  {
+    "id": "5",
+    "name": "USB-C Hub 7-in-1",
+    "category": "Connectivity",
+    "price": 39.99,
+    "originalPrice": 59.99,
+    "rating": 4.4,
+    "reviews": 198,
+    "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+    "description": "Multi-port USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery. Compact and portable.",
+    "specs": {
+      "Ports": "HDMI, 3x USB 3.0, SD/TF, USB-C PD",
+      "Max Power Delivery": "100W",
+      "Material": "Aluminum",
+      "Compatibility": "Universal USB-C devices"
+    },
+    "inStock": true
+  },
+  {
+    "id": "6",
+    "name": "Portable SSD 1TB",
+    "category": "Storage",
+    "price": 99.99,
+    "originalPrice": 149.99,
+    "rating": 4.9,
+    "reviews": 678,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+    "description": "Ultra-fast portable SSD with 1TB capacity, USB-C 3.1 connectivity, and rugged design.",
+    "specs": {
+      "Capacity": "1TB",
+      "Speed": "Up to 1050 MB/s",
+      "Interface": "USB-C 3.1",
+      "Weight": "50g"
+    },
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "7",
+    "name": "Monitor Light Bar",
+    "category": "Lighting",
+    "price": 79.99,
+    "originalPrice": 119.99,
+    "rating": 4.6,
+    "reviews": 234,
+    "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=500&h=500&fit=crop",
+    "description": "Auto-dimming monitor light bar that reduces eye strain with ambient light sensing.",
+    "specs": {
+      "Brightness": "Adjustable (500-1000 lux)",
+      "Color Temperature": "2700K-6500K",
+      "Power": "USB-A 5V/2A",
+      "Compatibility": "Universal Monitor Mount"
+    },
+    "inStock": true
+  },
+  {
+    "id": "8",
+    "name": "Wireless Mouse",
+    "category": "Peripherals",
+    "price": 34.99,
+    "originalPrice": 49.99,
+    "rating": 4.3,
+    "reviews": 145,
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop",
+    "description": "Ergonomic wireless mouse with precision tracking and 18-month battery life.",
+    "specs": {
+      "Connectivity": "Wireless 2.4GHz",
+      "DPI": "1000-4000 adjustable",
+      "Battery": "2x AAA (18 months)",
+      "Weight": "90g"
+    },
+    "inStock": true
+  },
+  {
+    "id": "9",
+    "name": "LENOVO THINKPAD T440",
+    "category": "Laptops",
+    "price": 349.99,
+    "originalPrice": 599.99,
+    "rating": 4.6,
+    "reviews": 287,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1588872657840-790ff3a58e39?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1516387938699-c52646db42da?w=800&h=600&fit=crop"
+    ],
+    "description": "Grade A refurbished Lenovo ThinkPad T440 - a reliable business laptop with excellent build quality. Perfect for professionals and everyday computing.",
+    "specs": {
+      "Processor": "Intel Core i5 4th Gen",
+      "RAM": "8GB DDR3",
+      "Storage": "256GB SSD",
+      "Display": "14.4\" FHD LED Screen (1920x1080)",
+      "GPU": "Intel HD Graphics 4400",
+      "Battery Life": "6-8 hours",
+      "Weight": "1.6 kg",
+      "Ports": "3x USB 3.0, HDMI, VGA, Ethernet, Audio Jack",
+      "OS": "Windows 10 Pro",
+      "Condition": "Import Grade A - Refurbished"
+    },
+    "inStock": true,
+    "featured": true,
+    "tags": [
+      "laptop",
+      "thinkpad",
+      "business",
+      "refurbished",
+      "budget-friendly"
+    ],
+    "shippingInfo": {
+      "estimatedDelivery": "Free delivery in 2-3 business days",
+      "freeShipping": true,
+      "returnPolicy": "30-day money-back guarantee"
+    },
+    "warranty": {
+      "duration": "1 year",
+      "coverage": "Hardware defects, tested and certified"
+    },
+    "customerReviews": [
+      {
+        "id": "r1",
+        "author": "Ahmed Hassan",
+        "rating": 5,
+        "title": "Excellent value for money!",
+        "content": "Great refurbished laptop! Condition is exactly as described - looks brand new. Fast shipping and excellent customer service. Highly recommended for anyone on a budget.",
+        "date": "1 week ago",
+        "helpful": 156,
+        "verified": true
+      },
+      {
+        "id": "r2",
+        "author": "Lisa Johnson",
+        "rating": 5,
+        "title": "Perfect for work and browsing",
+        "content": "Very reliable ThinkPad. Battery lasts a solid 7 hours, keyboard is comfortable, and it runs all my work applications smoothly. Great purchase!",
+        "date": "2 weeks ago",
+        "helpful": 124,
+        "verified": true
+      },
+      {
+        "id": "r3",
+        "author": "Mark Chen",
+        "rating": 4,
+        "title": "Good laptop, minor scratches",
+        "content": "Overall excellent condition. Few minor cosmetic scratches but works perfectly. Fast performance for the price. Would buy again.",
+        "date": "3 weeks ago",
+        "helpful": 89,
+        "verified": true
+      }
+    ],
+    "qaItems": [
+      {
+        "id": "q1",
+        "question": "Is this laptop suitable for heavy tasks?",
+        "asker": "TechUser",
+        "answer": "The i5 4th Gen handles general computing, office work, and light development well. It's not ideal for heavy video editing or gaming, but excellent for everyday use and productivity.",
+        "answerer": "ProductTeam",
+        "helpful": 203,
+        "date": "1 week ago"
+      },
+      {
+        "id": "q2",
+        "question": "What does Grade A condition mean?",
+        "asker": "BuyerCurious",
+        "answer": "Grade A (Import) means the laptop has been professionally refurbished, tested thoroughly, and restored to excellent condition. It may have minor cosmetic marks but functions like new with full warranty coverage.",
+        "answerer": "ProductTeam",
+        "helpful": 278,
+        "date": "5 days ago"
+      },
+      {
+        "id": "q3",
+        "question": "Can I upgrade the RAM or SSD?",
+        "asker": "UpgradeExplorer",
+        "answer": "Yes! The ThinkPad T440 has user-accessible upgrade options. You can upgrade RAM up to 16GB and replace the SSD with a larger capacity drive.",
+        "answerer": "ProductTeam",
+        "helpful": 165,
+        "date": "3 days ago"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Desk Organizer Set",
+    "category": "Accessories",
+    "price": 24.99,
+    "originalPrice": 39.99,
+    "rating": 4.5,
+    "reviews": 167,
+    "image": "https://images.unsplash.com/photo-1586985289688-cacf583b90ca?w=500&h=500&fit=crop",
+    "description": "Premium desk organizer set with multiple compartments for cables, pens, and accessories.",
+    "specs": {
+      "Material": "Premium Rubber Wood",
+      "Compartments": "5",
+      "Dimensions": "30x15x10 cm"
+    },
+    "inStock": true
+  },
+  {
+    "id": "11",
+    "name": "Cable Management Kit",
+    "category": "Accessories",
+    "price": 19.99,
+    "originalPrice": 29.99,
+    "rating": 4.4,
+    "reviews": 123,
+    "image": "https://images.unsplash.com/photo-1631162019897-3f66a9b03ffb?w=500&h=500&fit=crop",
+    "description": "Comprehensive cable management solution with clips, ties, and sleeves for organized desk setup.",
+    "specs": {
+      "Includes": "Cable clips (10), Velcro ties (20), Sleeves (5m)",
+      "Color": "Black",
+      "Reusable": "Yes"
+    },
+    "inStock": true
+  },
+  {
+    "id": "12",
+    "name": "Gaming Chair Ergonomic",
+    "category": "Furniture",
+    "price": 249.99,
+    "originalPrice": 349.99,
+    "rating": 4.7,
+    "reviews": 421,
+    "image": "https://images.unsplash.com/photo-1572846221988-0da08b95f6f3?w=500&h=500&fit=crop",
+    "description": "Premium ergonomic gaming chair with lumbar support and 4D adjustable armrests.",
+    "specs": {
+      "Material": "Premium Mesh + PU Leather",
+      "Max Weight": "150kg",
+      "Adjustable": "Height, Tilt, Armrests (4D)",
+      "Warranty": "3 years"
+    },
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "13",
+    "name": "Monitor Arm Dual",
+    "category": "Mounting",
+    "price": 89.99,
+    "originalPrice": 129.99,
+    "rating": 4.6,
+    "reviews": 256,
+    "image": "https://images.unsplash.com/photo-1587829191301-3be6dc20ffb7?w=500&h=500&fit=crop",
+    "description": "Adjustable dual monitor arm mount for improved desk space and ergonomics.",
+    "specs": {
+      "Monitor Support": "Up to 17-27 inch",
+      "Weight Capacity": "8kg per arm",
+      "Articulation": "Full 360° rotation",
+      "VESA Compatibility": "75x75, 100x100"
+    },
+    "inStock": true
+  }
+]
