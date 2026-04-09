@@ -176,7 +176,7 @@ export default function ProductsPageClient() {
           </aside>
 
           <div className="lg:col-span-3">
-            <ProductGrid products={filteredProducts} />
+            <ProductGrid products={filteredProducts} isLoading={isLoading} />
           </div>
         </div>
       </div>

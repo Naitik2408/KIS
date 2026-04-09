@@ -50,7 +50,7 @@ export default function HeroSection({ onSearchOpen, onCartOpen }: HeroSectionPro
   }
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-[78vh] sm:min-h-screen w-full overflow-hidden">
       {/* Background image carousel */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -73,7 +73,7 @@ export default function HeroSection({ onSearchOpen, onCartOpen }: HeroSectionPro
         <Navigation onCartOpen={onCartOpen} overlay />
       </div>
 
-      <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24 lg:py-32 min-h-[calc(100vh-4rem)] flex items-center">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 py-10 sm:py-20 md:py-24 lg:py-32 min-h-[calc(78vh-4rem)] sm:min-h-[calc(100vh-4rem)] flex items-center">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/10 border border-white/30 mb-6 sm:mb-8 lg:mb-10 backdrop-blur-sm hover:bg-white/15 transition-colors">
@@ -82,7 +82,7 @@ export default function HeroSection({ onSearchOpen, onCartOpen }: HeroSectionPro
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold tracking-tighter text-white mb-4 sm:mb-5 lg:mb-6 leading-tight text-balance drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-8xl font-bold tracking-tighter text-white mb-4 sm:mb-5 lg:mb-6 leading-tight text-balance drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
             <span className="bg-linear-to-r from-white via-slate-100 to-primary-foreground bg-clip-text text-transparent">
               Krishna Infotech Solutions
             </span>

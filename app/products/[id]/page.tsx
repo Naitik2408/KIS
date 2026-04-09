@@ -8,6 +8,8 @@ import { ProductGallery } from '@/components/product-gallery'
 import { SearchModal } from '@/components/search-modal'
 import { CartSidebar } from '@/components/cart-sidebar'
 import { Button } from '@/components/ui/button'
+import { Empty, EmptyContent, EmptyDescription, EmptyTitle } from '@/components/ui/empty'
+import { Skeleton } from '@/components/ui/skeleton'
 import { ShoppingCart, CheckCircle2, Package, Shield } from 'lucide-react'
 import Link from 'next/link'
 import { addToCart } from '@/lib/cart'
@@ -64,12 +66,54 @@ export default function ProductDetailPage() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-background">
+        <Navigation onCartOpen={() => setCartOpen(true)} />
+        <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="lg:col-span-2 space-y-4">
+              <Skeleton className="aspect-4/3 w-full rounded-2xl" />
+              <div className="grid grid-cols-3 gap-3">
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <Skeleton key={index} className="aspect-square w-full rounded-xl" />
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4 sm:space-y-6">
+              <Skeleton className="h-7 w-28 rounded-full" />
+              <Skeleton className="h-10 w-4/5" />
+              <div className="flex items-center gap-3">
+                <Skeleton className="h-11 w-32 rounded-xl" />
+                <Skeleton className="h-7 w-20 rounded-full" />
+              </div>
+              <Skeleton className="h-20 w-full rounded-2xl" />
+              <Skeleton className="h-28 w-full rounded-2xl" />
+              <Skeleton className="h-12 w-full rounded-xl" />
+            </div>
+          </div>
+        </div>
+      </main>
+    )
+  }
+
   if (!product) {
     return (
       <main className="min-h-screen bg-background">
         <Navigation onCartOpen={() => setCartOpen(true)} />
-        <div className="flex items-center justify-center min-h-[60vh]">
-          <p className="text-muted-foreground">{isLoading ? 'Loading product...' : 'Product not found'}</p>
+        <div className="px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+          <Empty className="border border-dashed border-border bg-card/60 py-16">
+            <EmptyContent>
+              <EmptyTitle>Product not found</EmptyTitle>
+              <EmptyDescription>
+                The item may have been removed or is unavailable right now. Try browsing the latest products instead.
+              </EmptyDescription>
+              <Link href="/products">
+                <Button variant="outline">Back to Products</Button>
+              </Link>
+            </EmptyContent>
+          </Empty>
         </div>
       </main>
     )

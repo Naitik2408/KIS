@@ -6,6 +6,8 @@ import ProductCard from '@/components/product-card'
 import { SearchModal } from '@/components/search-modal'
 import { CartSidebar } from '@/components/cart-sidebar'
 import { Button } from '@/components/ui/button'
+import { Empty, EmptyContent, EmptyDescription, EmptyTitle } from '@/components/ui/empty'
+import { Skeleton } from '@/components/ui/skeleton'
 import { ChevronRight, MessageCircle, PhoneCall, MapPin, ArrowUpRight } from 'lucide-react'
 import type { Product } from '@/lib/products'
 import { GoogleReviewsSection } from '@/components/google-reviews-section'
@@ -16,6 +18,7 @@ import { TeamMembersSection } from '@/components/team-members-section'
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [products, setProducts] = useState<Product[]>([])
+  const [isLoading, setIsLoading] = useState(true)
   const [categories, setCategories] = useState<Array<{ id: string; label: string }>>([
     { id: 'all', label: 'All Products' },
   ])
@@ -60,6 +63,8 @@ export default function Home() {
         ])
       } catch (error) {
         console.error('[home] Failed to load catalog', error)
+      } finally {
+        setIsLoading(false)
       }
     }
 
@@ -103,9 +108,41 @@ export default function Home() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {isLoading ? (
+            Array.from({ length: 6 }).map((_, index) => (
+              <div key={index} className="overflow-hidden rounded-2xl border border-border bg-card">
+                <Skeleton className="aspect-4/3 w-full rounded-none" />
+                <div className="space-y-3 p-5 sm:p-6">
+                  <div className="flex gap-2">
+                    <Skeleton className="h-5 w-16 rounded-full" />
+                    <Skeleton className="h-5 w-20 rounded-full" />
+                  </div>
+                  <Skeleton className="h-6 w-4/5" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-5/6" />
+                  <div className="space-y-2 pt-2">
+                    <Skeleton className="h-9 w-full rounded-lg" />
+                    <Skeleton className="h-9 w-full rounded-lg" />
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))
+          ) : (
+            <div className="md:col-span-2 lg:col-span-3">
+              <Empty className="border border-dashed border-border bg-card/60 py-16">
+                <EmptyContent>
+                  <EmptyTitle>No items available</EmptyTitle>
+                  <EmptyDescription>
+                    There are no laptops in this category right now. Please check back later or choose another filter.
+                  </EmptyDescription>
+                </EmptyContent>
+              </Empty>
+            </div>
+          )}
         </div>
       </section>
 

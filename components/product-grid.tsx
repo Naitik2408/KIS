@@ -27,8 +27,8 @@ export function ProductGrid({ products, isLoading }: ProductGridProps) {
   if (products.length === 0) {
     return (
       <Empty
-        title="No products found"
-        description="Try adjusting your filters or search terms to find what you're looking for."
+        title="No items available"
+        description="Try another category or search term to find available laptops."
         size="lg"
       />
     )

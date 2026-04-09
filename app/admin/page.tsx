@@ -12,17 +12,32 @@ export default function AdminDashboard() {
   const [products, setProducts] = useState<Product[]>([])
   const [categories, setCategories] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const [loadError, setLoadError] = useState<string | null>(null)
 
   useEffect(() => {
     const loadDashboardData = async () => {
       try {
+        setLoadError(null)
+
         const [productsRes, categoriesRes] = await Promise.all([
           fetch('/api/admin/products', { cache: 'no-store' }),
           fetch('/api/categories', { cache: 'no-store' }),
         ])
 
         if (!productsRes.ok || !categoriesRes.ok) {
-          throw new Error('Failed to load admin dashboard data')
+          const [productsError, categoriesError] = await Promise.all([
+            productsRes.json().catch(() => ({})),
+            categoriesRes.json().catch(() => ({})),
+          ]) as Array<{ error?: string }>
+
+          const productReason = productsError.error
+            ? `/api/admin/products: ${productsRes.status} ${productsError.error}`
+            : `/api/admin/products: ${productsRes.status}`
+          const categoryReason = categoriesError.error
+            ? `/api/categories: ${categoriesRes.status} ${categoriesError.error}`
+            : `/api/categories: ${categoriesRes.status}`
+
+          throw new Error(`${productReason} | ${categoryReason}`)
         }
 
         const productsData = (await productsRes.json()) as { products: Product[] }
@@ -30,7 +45,9 @@ export default function AdminDashboard() {
         setProducts(productsData.products)
         setCategories(categoriesData.categories.filter((category) => category !== 'All'))
       } catch (error) {
-        console.error('[admin] Failed loading dashboard data', error)
+        const message = error instanceof Error ? error.message : 'Failed to load admin dashboard data'
+        console.error('[admin] Failed loading dashboard data', message)
+        setLoadError(message)
       } finally {
         setIsLoading(false)
       }
@@ -70,6 +87,12 @@ export default function AdminDashboard() {
   return (
     <AdminLayout>
       <div className="space-y-6 sm:space-y-8">
+        {loadError && (
+          <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+            {loadError}
+          </div>
+        )}
+
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
           <AdminStatsCard
